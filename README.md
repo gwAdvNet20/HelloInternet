@@ -24,6 +24,13 @@ The server should take a port number as a command line argument.
 
 *Challenge mode:* Instead of always responding with "Goodbye in X", make the message vary based on the client's language: "Goodbye Y from X" where Y is the client's language and X is the server's language. Also, make it print the IP of each connected client.
 
+## Files and Folders
+You should create your client and server in a folder named for the language you are using (e.g., `java/`). You also must include a `README.md` file with instructions on how to build and run your programs. If any extra software (compilers/libraries) need to be installed, include those in your instructions and provide a `setup.sh` script that installs anything necessary (you can assume Ubuntu is the OS).
+
+The `README.md` also must contain documentation about the key socket functions in the language of your choice. This does not need to be exhaustive, but should describe the basic usage and any special considerations.
+
+See the `python/` directory for a sample. Note that the client and server here do not fully meet the specification, so you may want to create another PR to improve them!
+
 ## Getting Started
 Once your group has picked a language and ensured there are no duplicates, follow these instructions:
 
@@ -36,4 +43,4 @@ Once your group has picked a language and ensured there are no duplicates, follo
 5. Commit your changes to your local branch using the `git add` and `git commit` commands. If you aren't sure how, ask for help!
 6. Push your changes to the GitHub origin repository by using `git push origin helloX` (be sure to fill in your branch name)
 7. Create a Pull Request using the GitHub web interface to try to merge your branch with the main HelloInternet repository.
-8. Celebrate!
+8. Celebrate! (once your PR is merged)
