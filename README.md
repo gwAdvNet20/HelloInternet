@@ -15,12 +15,14 @@ The client should take the server's hostname/IP and port as command line argumen
 ./helloC
 Sending "Hello in C"
 Received: "Goodbye in Python"
-
 ```
-## Server Protocol
-A `hellosrvX` server is a program written in the language X that accepts incoming client requests. For each client that connects it should try to read a message, print that message to the screen, and then send the string "Goodbye in X". It should then close the client connection and get ready to accept a new client.
 
-*Challenge mode:* Instead of always responding with "Goodbye in X", make the message vary based on the client's language: "Goodbye Y from X" where Y is the client's language and X is the server's language.
+## Server Protocol
+A `hellosrvX` server is a program written in the language X that accepts incoming client requests. For each client that connects it should try to read a message, print that message to the screen, and then send the string "Goodbye in X". It should then close the client connection and get ready to accept a new client.  Keep doing this until the program is killed with `ctrl-c`.
+
+The server should take a port number as a command line argument.
+
+*Challenge mode:* Instead of always responding with "Goodbye in X", make the message vary based on the client's language: "Goodbye Y from X" where Y is the client's language and X is the server's language. Also, make it print the IP of each connected client.
 
 ## Getting Started
 Once your group has picked a language and ensured there are no duplicates, follow these instructions:
