@@ -42,6 +42,10 @@
 *.idb
 *.pdb
 
+# Rust files
+*target/
+*Cargo.lock
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
