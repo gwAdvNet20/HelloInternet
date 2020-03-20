@@ -1,19 +1,27 @@
-# Hello Internet! in Python
+# HelloInternet in Python
+## Katie Bramlett and Sreya Nalla
+### 1/28/20
 
-**TODO: Document python server functions!**
+**Assignment: Create a client in Python to connect to a universal server.**
 
 ## Creating a Socket
+- Call the socket() function in the server file -- which returns a socket that is not in the state of accepting connections, and is not bound to an address or port.
+- Then, take in an address and a port from command line arguments entered by the user.
+- For the client file, the user will run the file with 2 command line arguments: IP address and port number.
+- For the server file, the user will run the file with 1 command line argument: just the port number.
+- Now, with the bind() function, the address and port are paired and the socket is bound to them at the server.
+- The server socket needs to move to a new state where it waits for client connections.
 
-Use the `socket.socket(socket.AF_INET, socket.SOCK_STREAM)` function to create a TCP socket in python. This will return a socket object.
-
-## Connecting to a Server 
-
-Use the `connect()` function of the socket object to connect to a server. The function takes a tuple with the hostname (or IP) and port.
+## Connecting to a Server
+- Now, the server socket enters the wait state with the listen() function, where the server waits for any incoming client connections.
+- Client must now call the connect() function to connect to the server socket.
+- The IP address and the port number of the server must be specified.
+- Next, by calling the accept() function, the server socket creates a pair containing a socket connected to a specific client through the IP address of that client.
 
 ## Sending and Receiving
+- Using the socket for the client connection, both the client and the server can send and receive data from each other using the send() and recv() functions.
+- When sending a string, the encode() function must be used.
+- When receiving the string, the decode() function must then be used.
 
-Use the `send()` and `recv()` functions in the socket object to transfer data. If sending a string, you need to `encode()` the string first and you should `decode()` it when receiving.
-
-## Clean up
-
-You should `close()` a socket when you are done with it.
+## Clean Up
+- Socket must be closed on both ends after the sending/receiving is complete.
